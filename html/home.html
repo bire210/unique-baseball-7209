@@ -31,9 +31,27 @@
             <button>List your Property</button>
             <button>Supports</button>
             <button>Trips</button>
-            <button>Sign in</button>
+            <button id="sign-in">Sign in</button>
         </div>
     </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close"></span>
+          
+          <h3>Members can access discounts points and special features</h3>
+          <button id="sign">Sign in</button>
+          <br>
+          <button id="newreg">Create a free account</button>
+          <br>
+          <p>List of favorites</p>
+          <p>Loyality program</p>
+          <hr>
+          <p>feedback</p>
+        </div>
+      
+      </div>
     <!-- search section -->
     <div id="search">
 
@@ -51,6 +69,19 @@
         </div>
 
     </div>
+     <h1>Here to help keep you on the move</h1>
+     <div id="help">
+     <div></div>
+     <div></div>
+     <div></div>
+
+
+     </div>
+
+
+
+
+    <h1>Traveling Tips</h1>
 <div id="traveling-tips">
     <div>
         <h3>National Parks</h3>
@@ -180,3 +211,50 @@
 </body>
 
 </html>
+<script>
+var modal = document.getElementById("myModal");
+    let body=document.querySelector("body");
+    // Get the button that opens the modal
+    var btn = document.getElementById("sign-in");
+    
+    // Get the <span> element that closes the modal
+   
+    
+    // When the user clicks the button, open the modal 
+   
+    
+    // When the user clicks on <span> (x), close the modal
+    
+    
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+      if (event.target==body) {
+        modal.style.display = "none";
+      }
+    }
+
+    let sign_in=document.querySelector("#sign");
+    sign_in.addEventListener("click",function(){
+        console.log("signin")
+        window.location.href="sign.html"
+    })
+    let create=document.querySelector("#newreg");
+    create.addEventListener("click",function(){
+        window.location.href="register.html"
+    })
+    let params = new URLSearchParams(document.location.search);
+      let name = params.get("name");
+      if(name!==null){
+        document.querySelector("#sign-in").innerText=name;
+       
+      }
+      if(btn.innerText==="Sign in"){
+    btn.onclick = function() {
+      modal.style.display = "block";
+    }
+   }else{
+    modal.style.display = "none";
+   }
+console.log(name);
+</script>
+

@@ -1,0 +1,61 @@
+#navbar>div:nth-child(2)>img{
+width: 19%;
+margin: 5px 40%;
+
+}
+#navbar{
+    border: 1px solid blue;
+   display: flex;
+    
+}
+#navbar>div:nth-child(1)>button{
+    border: 0px;
+    background-color: white;
+    font-size: 40px;
+   height: 100%;
+}
+#navbar>div:nth-child(2){
+    width: 90%;
+}
+#navbar>div:nth-child(1){
+    width: 9%;
+}
+#main{
+    padding: 15px;
+    width: 30%;
+    border: 0px solid red;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+#main>div{
+    text-align: center;
+    margin-top: 40px;
+}
+#main>div>img{
+    height: 20px;
+    margin: 5px 20px;
+}
+input[type="email"],input[type="password"]{
+    width: 95%;
+    margin: 15px auto;
+    font-size: 20px;
+    padding: 10px;
+}
+input[type="submit"]{
+    width: 100%;
+    font-size: 20px;
+    padding:5px 0px 5px 0px;
+    background-color: rgb(148, 132, 132);
+    color: white;
+    border: 0px;
+}
+#main>div>button{
+    border: none;
+    background-color: white;
+}
+#main>div>button:hover{
+    color: blue;
+    text-underline-position: below;
+}
+
