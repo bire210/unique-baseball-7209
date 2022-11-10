@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in</title>
+    <link rel="icon" href="https://a.travel-assets.com/mad-service/header/banner/orbitz.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="C:\Users\91823\Desktop\con_unit_2\unique-baseball-7209\style\sign.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div>
+            <button id="back">&#8592;</button>
+        </div>
+        <div>
+            <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201" alt="">
+        </div>
+    </div>
+    <div id="main">
+
+        <h1>Sign in</h1>
+        <form action="form">
+
+            <input type="email" name="email" id="emai" placeholder="Email Address">
+            <br>
+            <input type="password" name="password" id="password" placeholder="Password">
+            <br>
+            <input type="checkbox" name="checkme" id="checkbox" value="checkbox">
+            <label for="checkbox"> Keep me signed in</label>
+            <br>
+            <p>By signing in, I agree to the Orbitz Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and
+                Conditions.</p>
+            <input type="submit" value="sign in">
+
+        </form>
+        <div>
+
+            <button>Forgot password?</button>
+            <br>
+            <br>
+            <br>
+            <label for="sign in">Don't have an account?</label>
+
+            <button id="create">Create one</button>
+            <br>
+            <br>
+            <p>or Continue With</p>
+            <img src="https://a.travel-assets.com/egds/marks/apple.svg" alt="">
+            <img src="https://a.travel-assets.com/egds/marks/facebook.svg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+    let regArr=JSON.parse(localStorage.getItem("user-data"))||[];
+let gohome=document.querySelector("#back");
+gohome.addEventListener("click",function(){
+    window.location.href="home.html"
+})
+let create=document.querySelector("#create");
+create.addEventListener("click",function(){
+    window.location.href="register.html"
+})
+
+
+let sign=document.querySelector("form");
+sign.addEventListener("submit",function(event){
+    event.preventDefault();
+    let email=sign.email.value;
+    let pass=sign.password.value;
+    let fltuser=regArr.filter(function(element){
+         return(email===element.email && pass===element.password)
+    });
+    //console.log(fltuser);
+    if(fltuser.length==0){
+        alert("No data Available")
+        window.location.href="register.html"
+    }else{
+       
+        let username=fltuser[0].firstname;
+        alert("Login Successful"+" "+username)
+        window.location.href="home.html?name="+username;
+    }
+})
+
+</script>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create account</title>
+    <link rel="icon" href="https://a.travel-assets.com/mad-service/header/banner/orbitz.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="C:\Users\91823\Desktop\con_unit_2\unique-baseball-7209\style\register.css">
+</head>
+
+<body>
+    <div id="navbar">
+        <div>
+            <button id="back">&#8592;</button>
+        </div>
+        <div>
+            <img src="https://www.orbitz.com/_dms/interstitial/logo.svg?locale=en_US&siteid=70201" alt="">
+        </div>
+    </div>
+    <div id="main">
+
+        <h1>Create an account</h1>
+        <form action="form">
+
+            <input type="email" name="email" id="emai" placeholder="Email Address">
+            <br>
+            <input type="text" name="first" id="first" placeholder="First Name">
+            <br>
+            <input type="text" name="last" id="last" placeholder="Last Name">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <br>
+            <input type="checkbox" name="checkme" id="checkbox" value="checkbox">
+            <label for="checkbox"> Keep me signed in</label>
+            <br>
+            <p>By signing in, I agree to the Orbitz Terms and Conditions, Privacy Statement and Orbitz Rewards Terms and
+                Conditions.</p>
+            <input type="submit" value="Continue">
+
+        </form>
+        <div>
+
+            <button>Forgot password?</button>
+            <br>
+            <br>
+            <br>
+            <label for="sign in">Don't have an account?</label>
+
+            <button id="sign">Sign in</button>
+            <br>
+            <br>
+            <p>or Continue With</p>
+            <img src="https://a.travel-assets.com/egds/marks/apple.svg" alt="">
+            <img src="https://a.travel-assets.com/egds/marks/facebook.svg" alt="">
+        </div>
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+
+let gohome=document.querySelector("#back");
+gohome.addEventListener("click",function(){
+    window.location.href="home.html"
+})
+let sign=document.querySelector("#sign");
+sign.addEventListener("click",function(){
+    window.location.href="sign.html"
+})
+
+
+let form=document.querySelector("form");
+form.addEventListener("submit",function(event){
+   event.preventDefault();
+   let filarr=[]
+   let arr=JSON.parse(localStorage.getItem("user-data"))||[]
+   let obj={
+    email:form.email.value,
+    firstname:form.first.value,
+    lastname:form.last.value,
+    password:form.password.value
+   }
+   if(obj.email==""||obj.firstname==""||obj.lastname==""||obj.password==""){
+    alert("please fill All the Deatils")
+   }
+   
+
+   else{
+     filarr=arr.filter(function(element){
+        return(element.email===form.email.value)
+    })
+    if(filarr.length==0){
+        arr.push(obj);
+        localStorage.setItem("user-data",JSON.stringify(arr));
+        alert("Register Succesfuly")
+        window.location.href="sign.html"
+    }else{
+        alert("All ready Regitered");
+    }
+   
+   }
+   
+})
+
+
+</script>

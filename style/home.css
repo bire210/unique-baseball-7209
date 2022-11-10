@@ -152,6 +152,9 @@ ul{
     display: flex;
     justify-content: space-evenly;
 }
+body>h1{
+    margin-left: 35px;
+}
 #traveling-tips>div{
     width: 42%;
     height: 100%;
@@ -184,3 +187,67 @@ ul{
     height:40px;
     font-size: 30px;
 }
+
+.modal {
+    display: none; /* Hidden by default */
+    position: absolute; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    right: 10px;
+    border-radius: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  
+    width: 25%; /* Full width */
+   /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding: 20px;
+    margin-right: 20px;
+    background-color: #fefefe;
+    
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    width: 91%;
+    
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  #sign{
+      width: 100%;
+      font-size: 20px;
+      background-color: green;
+      color: white;
+      margin: 10px auto;
+      height: 30px;
+  }
+  #newreg{
+      border: 00px;
+      font-size: 20px;
+      background: none;
+  }
+  
+  .modal-content>button,p{
+      width: 100%;
+      margin: 10px auto;
+  }
+  #sign:hover,#newreg:hover{
+    color: #aaaaaa;
+  }
+  .modal-content>p:hover{
+    color: #aaaaaa;
+  }
