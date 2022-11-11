@@ -27,7 +27,7 @@
 }
 
 #nav {
-    height: 100px;
+    
     border: 1px solid black;
     background-color: black;
     display: flex;
@@ -36,7 +36,7 @@
 
 #left {
 
-    height: 100px;
+    
     display: flex;
 
 }
@@ -55,7 +55,7 @@
 }
 #right {
 
-    height: 100px;
+    /* height: 100px; */
     display: flex;
     justify-content: space-evenly;
    
@@ -87,7 +87,7 @@ background-size: cover;
 
 }
 #first>div{
-height: 200px;
+/* height: 200px; */
 border: 1px solid blue;
 }
 #reward{
@@ -111,6 +111,7 @@ border: 1px solid blue;
     border: 0px solid red;
     padding: 15px;
     display: flex;
+    background-color: #fefefe;
     
 }
 
@@ -159,6 +160,7 @@ body>h1{
     width: 42%;
     height: 100%;
    color: white;
+   background-color: #fefefe;
 }
 #traveling-tips>div:nth-child(1){
     background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/18/ORB_Blog_NationalParks_imgB_375x468_20211117.jpg");
@@ -251,3 +253,118 @@ body>h1{
   .modal-content>p:hover{
     color: #aaaaaa;
   }
+  #help{
+    display: flex;
+    
+    width: 100%;
+    height: 100px;
+    justify-content: space-evenly;
+    
+  }
+  #help>div{
+    width: 28%;
+    border: 1px solid blue;
+    padding-left: 20px;
+    background-color: #fefefe;
+   
+
+  }
+  body{
+    background-color: azure;
+  }
+  #topdeals{
+    border: 1px solid blue;
+    width: 95%;
+    margin: 60px auto;
+    /* height: 300px; */
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2020/12/03/ORB_Storefront_Deals_2740x1484-V1.jpg");
+  background-size: cover;  
+  background-position: 0%;
+background-color: black;
+  color:rgb(69, 19, 19);
+  
+}
+#topdeals>h4{
+    margin-top:220px;
+    margin-bottom: 0px;
+}
+#feature{
+    
+    height: 180px;
+   margin: auto;
+    width: 95%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+   
+}
+#feature>div{
+    height: 100%;
+    border: 1px solid black;
+    text-align: center;
+  color: #fefefe;
+}
+#feature>div:nth-child(4){
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_JetAndReset_imgB_900x600_20211101.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow");
+}
+
+#feature>div:nth-child(2){
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_AllInclusive_imgB_900x600_20211101.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow");
+   text-align: center;
+}
+#feature>div:nth-child(3){
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_MOD_imgB_900x600_20211101.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow");
+}
+#feature>div:nth-child(1){
+    background-image: url("https://forever.travel-assets.com/flex/flexmanager/images/2021/11/02/ORB_Storefront_LastMinute_imgB_900x600_20211101.jpg?impolicy=fcrop&w=300&h=200&q=mediumLow");
+}
+#first div>img{
+    width: 100%;
+    
+}
+
+#search>div{
+    margin: auto;
+    width: 95%;
+    
+    background-color: #fefefe;
+    height: 100%;
+}
+#head{
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+    margin: auto;
+
+}
+#dataBook{
+    display: flex;
+    justify-content: space-evenly;
+}
+#dataBook>div{
+    border: 1px solid #aaaaaa;
+    padding: 10px;
+}
+#dataBook>div>input{
+    border: none;
+   
+}
+#dataBook>div>input[type="text"]{
+    height: 100%;
+    padding: none;
+    font-size: 30px;
+}
+#Searcdiv{
+    width: 20%;
+    margin: 40px auto;
+    
+}
+#Searcdiv>button{
+    font-size: 40px;
+    background-color: green;
+    color: white;
+    padding: 10px 50px;
+}
+#head>h4:hover{
+   color: #aaaaaa;
+}
